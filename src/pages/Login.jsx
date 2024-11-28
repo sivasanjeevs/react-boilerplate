@@ -14,7 +14,8 @@ const Login = () => {
         e.preventDefault();
         if (email.length != 0 && password.length != 0) {
             try {
-                const response = await axios.get(Host.APIHOST + ApiRoutes.LOGIN + `?email=${email}&password=${password}/`);
+                const response = await axios.get(Host.APIHOST + ApiRoutes.LOGIN + `?email=${email}&password=${password}`);
+                console.log(response);
                 if (response.status == 200) {
                     setErrMsg("Valid Credentials");
             setShowErr(true);
