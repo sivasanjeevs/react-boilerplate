@@ -22,7 +22,8 @@ const Login = () => {
 
                 }
             } catch (error) {
-                setErrMsg(error.response)
+                console.log(error);
+                setErrMsg(error.response.statusText)
             setShowErr(true);
 
             }
